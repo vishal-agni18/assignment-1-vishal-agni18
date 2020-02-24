@@ -135,11 +135,11 @@ public class LinkedList1 {
         while (current != null) {
             if (index == pos) {
                 System.out.println();
-                System.out.println("-----------------------*-------------------------");
+                System.out.println("-----------------------*--------------------------");
                 System.out.println("Name:" + current.getValue().getFirstName() + " " + current.getValue().getLastName());
                 System.out.println("Contacts:" + current.getValue().getContacts().toString());
                 System.out.println("Email:" + current.getValue().getEmail());
-                System.out.println("------------------------*-------------------------");
+                System.out.println("------------------------*--------------------------");
                 System.out.println();
                 break;
             }
