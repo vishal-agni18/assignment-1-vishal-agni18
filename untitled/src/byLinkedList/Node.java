@@ -1,8 +1,8 @@
 package byLinkedList;
 
 public class Node {
-    Person value;
-    Node next;
+    private Person value;
+    private Node next;
 
 
 }
