@@ -47,6 +47,16 @@ public class LinkedList1 {
         }
         return -1;
     }
+    public void removeFirst() {
+        if (first == last) {
+            first = null;
+            last = null;
+        } else {
+            Node second = first.getNext();
+            first = second;
+        }
+    }
+
 
 
 
