@@ -68,6 +68,7 @@ public class Tasks {
             }
         }
     }
+
     public void viewcontact(LinkedList1 linkedList1) {
         System.out.println("---Here are all your contacts---");
         if (!linkedList1.isEmpty()) {
@@ -77,6 +78,19 @@ public class Tasks {
         }
     }
 
-
+    public void deleteContact(LinkedList1 linkedList1) {
+        if (!linkedList1.isEmpty()) {
+            System.out.println("Here are all the contacts: Press the number against" +
+                    " to delete the contact.");
+            linkedList1.displayOne();
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+            linkedList1.deleteNode(choice);
+            linkedList1.displayOne();
+            System.out.println("Deleted..!!");
+        } else {
+            System.out.println("No Contacts.You must need to add contacts Before you could delete..");
+        }
+    }
 
 }
