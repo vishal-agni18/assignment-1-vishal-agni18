@@ -57,6 +57,67 @@ public class LinkedList1 {
         }
     }
 
+    public void removeLast() {
+        var previousNode = getPreviousNode(last);
+        last = previousNode;
+        last.setNext(null);
+    }
+
+    private Node getPreviousNode(Node node) {
+        var current = first;
+        while (current.getNext() != null) {
+            if (current.getNext() == node) {
+                return current;
+            }
+            current = current.getNext();
+        }
+        return null;
+    }
+
+    public void deleteNode(int position) {
+        if (first == null)
+            return;
+        Node temp = first;
+        if (position == 0) {
+            first = temp.getNext();
+            return;
+        }
+        for (int i = 0; temp != null && i < position - 1; i++)
+            temp = temp.getNext();
+        if (temp == null || temp.getNext() == null)
+            return;
+        Node next = temp.getNext().getNext();
+        temp.setNext(next);
+    }
+
+    public int size() {
+        var current = first;
+        int index = 1;
+        while (current.getNext() != null) {
+            current = current.getNext();
+            index++;
+        }
+        return index;
+    }
+
+    public void display() {
+        var current = first;
+        System.out.println("Contact list--->");
+        System.out.println();
+        while (current != null) {
+            System.out.println("-----------------------*-------------------------");
+            System.out.println("Name:" + current.getValue().getFirstName() + " " + current.getValue().getLastName());
+            System.out.println("Contacts:" + current.getValue().getContacts().toString());
+            System.out.println("Email:" + current.getValue().getEmail());
+            System.out.println("------------------------*-------------------------");
+            System.out.println();
+            current = current.getNext();
+        }
+        System.out.println();
+    }
+
+
+
 
 
 
