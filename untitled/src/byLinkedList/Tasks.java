@@ -89,7 +89,7 @@ public class Tasks {
             linkedList1.displayOne();
             System.out.println("Deleted..!!");
         } else {
-            System.out.println("No Contacts.You must need to add contacts Before you could delete..");
+            System.out.println("No Contacts.You must need to add contacts Before you could delete....");
         }
     }
 
