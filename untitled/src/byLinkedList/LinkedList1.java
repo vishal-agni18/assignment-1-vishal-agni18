@@ -116,10 +116,22 @@ public class LinkedList1 {
         System.out.println();
     }
 
-
-
-
-
-
-
+    public void getNode(int pos) {
+        var current = first;
+        int index = 0;
+        while (current != null) {
+            if (index == pos) {
+                System.out.println();
+                System.out.println("-----------------------*-------------------------");
+                System.out.println("Name:" + current.getValue().getFirstName() + " " + current.getValue().getLastName());
+                System.out.println("Contacts:" + current.getValue().getContacts().toString());
+                System.out.println("Email:" + current.getValue().getEmail());
+                System.out.println("------------------------*-------------------------");
+                System.out.println();
+                break;
+            }
+            index++;
+            current = current.getNext();
+        }
+    }
 }
